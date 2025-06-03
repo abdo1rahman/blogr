@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="925" height="882" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <rect id="a" x="0" y="0" width="642" height="427" rx="15"/>
+  </defs>
+  <g transform="translate(40)" fill="none" fill-rule="evenodd">
+    <rect fill="#2D2E40" opacity=".08" transform="matrix(1 0 0 -1 0 890)" x="145" y="144" width="600" height="602" rx="300"/>
+    <rect stroke="#2D2E40" opacity=".5" transform="matrix(1 0 0 -1 0 882)" x="105.5" y="100.5" width="679" height="681" rx="339.5"/>
+    <rect stroke="#2D2E40" opacity=".25" transform="matrix(1 0 0 -1 0 882)" x="5.5" y=".5" width="879" height="881" rx="439.5"/>
+  </g>
+</svg>

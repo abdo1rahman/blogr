@@ -99,7 +99,7 @@ nav {
   margin: 0;
   color: white;
   height: 40rem;
-  width: 100vw;
+  width: 100dvw;
   background: linear-gradient(to right, var(--orange), var(--deep-red));
   z-index: 10;
   overflow: hidden;
@@ -178,11 +178,14 @@ nav {
 
 .editor > h2 {
   text-align: center;
+  font-size: 60px;
 }
 
 .editor__details {
   display: flex;
   align-items: center;
+  position: relative;
+  top: 4rem;
 }
 
 .details__descreption,
@@ -190,11 +193,24 @@ nav {
   width: 50%;
 }
 
-.illus-desktop {
+.details__visual {
   position: relative;
-  top: -5rem;
-  right: -7rem;
+  /* overflow-y: hidden; */
+}
+
+.editor-screen {
+  position: absolute;
+  top: -30rem;
+  right: -20rem;
   height: 50rem;
+}
+
+.editor-circles {
+  position: absolute;
+  top: -28rem;
+  left: 9rem;
+  height: 40rem;
+  z-index: -1;
 }
 
 .details__descreption {

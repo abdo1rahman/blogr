@@ -26,10 +26,8 @@ export default function Editor() {
           </div>
         </div>
         <div className="details__visual">
-          <img
-            src="/images/illustration-editor-desktop.svg"
-            className="illus-desktop"
-          />
+          <img src="/images/editor-screen.svg" className="editor-screen" />
+          <img src="/images/editor-circles.svg" className="editor-circles" />
         </div>
       </div>
     </div>
