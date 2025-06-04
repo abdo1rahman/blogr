@@ -1,8 +1,7 @@
 .app {
   margin: 0;
   padding: 0;
-  /* display: flex;
-  flex-direction: column; */
+  overflow: hidden;
 }
 
 nav {
@@ -73,8 +72,9 @@ nav {
 .dropdown {
   list-style-type: none;
   position: absolute;
-  top: 110px;
-  padding: 1rem;
+  z-index: 1000;
+  top: 50px;
+  padding: 0;
   height: fit-content;
   min-width: 150px;
   transform: translateX(-20%);
@@ -87,7 +87,18 @@ nav {
   transition: font-weight 500ms ease;
 }
 
-.dropdown > p:hover {
+.dropdown p {
+  position: relative;
+  padding: 1rem;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 100%;
+  transition: background-color 200ms ease;
+  z-index: 1000;
+}
+
+.dropdown p:hover {
+  background-color: var(--light-red);
   font-weight: 700;
 }
 
@@ -120,7 +131,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1000;
 }
 
 .hook {
@@ -195,7 +205,9 @@ nav {
 
 .details__visual {
   position: relative;
-  /* overflow-y: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .editor-screen {
@@ -208,9 +220,23 @@ nav {
 .editor-circles {
   position: absolute;
   top: -28rem;
-  left: 9rem;
+  right: -15rem;
   height: 40rem;
   z-index: -1;
+}
+
+.self-orbit {
+  animation: spin 2s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .details__descreption {
@@ -225,4 +251,23 @@ nav {
 .details__descreption p {
   color: var(--gray);
   font-size: 20px;
+}
+
+@media (max-width: 875px) {
+  .nav-start {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .hook {
+    font-size: 45px;
+  }
+
+  .hero__btn {
+    width: 12rem;
+    height: 4rem;
+  }
+  .hamburger {
+    height: 30px;
+    width: auto;
+  }
 }

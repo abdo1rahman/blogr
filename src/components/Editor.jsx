@@ -27,7 +27,11 @@ export default function Editor() {
         </div>
         <div className="details__visual">
           <img src="/images/editor-screen.svg" className="editor-screen" />
-          <img src="/images/editor-circles.svg" className="editor-circles" />
+
+          <img
+            src="/images/editor-circles.svg"
+            className="editor-circles self-orbit"
+          />
         </div>
       </div>
     </div>
