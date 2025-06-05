@@ -253,6 +253,53 @@ nav {
   font-size: 20px;
 }
 
+.overlay {
+  position: fixed;
+  top: 10rem;
+  width: 100%;
+  height: fit-content;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 90%;
+  height: max(fit-content, 100vh);
+  align-items: center;
+  overflow-y: scroll;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 2000;
+}
+
+.mobile__menu {
+  color: var(--pitch-black);
+  text-decoration: none;
+  margin: 1rem;
+  font-size: 34px;
+  padding: 1rem;
+}
+
+.drk-arw {
+  height: 15px;
+  margin: 0.5rem;
+  transform: translateY(50%);
+}
+
 @media (max-width: 875px) {
   .nav-start {
     width: 100%;
@@ -265,9 +312,12 @@ nav {
   .hero__btn {
     width: 12rem;
     height: 4rem;
+    font-size: 20px;
   }
   .hamburger {
+    position: sticky;
     height: 30px;
     width: auto;
+    z-index: 2000;
   }
 }

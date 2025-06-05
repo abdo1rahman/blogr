@@ -1,9 +1,9 @@
 import Navbar from "./Navbar.jsx";
 
-export default function Hero() {
+export default function Hero({ navOpen, toggleNav }) {
   return (
     <div className="hero">
-      <Navbar />
+      <Navbar navOpen={navOpen} toggleNav={toggleNav} />
       <div className="hero__title">
         <p className="hook">A modern publishing platform</p>
         <p className="subtitle">
@@ -14,6 +14,7 @@ export default function Hero() {
           <button className="btn learn-more hero__btn">Learn More</button>
         </div>
       </div>
+
       <img src="/images/bg-pattern-intro-desktop.svg" className="hero__bg" />
     </div>
   );

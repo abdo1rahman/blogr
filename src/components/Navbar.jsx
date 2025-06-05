@@ -2,9 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 const threshold = 875;
 
-export default function Navbar() {
+export default function Navbar({ navOpen, toggleNav }) {
   const [activeMenu, setActiveMenu] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -131,13 +132,16 @@ export default function Navbar() {
             </a>
           </div>
         ) : (
-          <>
+          <div onClick={() => toggleNav(!navOpen)}>
             <img
-              src="/images/icon-hamburger.svg"
-              className="hamburger"
-              alt=""
+              src={
+                navOpen
+                  ? "/images/icon-close.svg"
+                  : "/images/icon-hamburger.svg"
+              }
+              className={navOpen ? "hamburger fixed" : "hamburger"}
             />
-          </>
+          </div>
         )}
       </div>
 
