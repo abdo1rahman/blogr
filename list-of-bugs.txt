@@ -1,1 +1,2 @@
-1- The dropdown menus of the navbar are overlapping with the hero's title
+1- The dropdown menus of the navbar are overlapping with the hero's title.
+2- If the navbar is open on mobile size and the window is expanded, the navbar stays open.
