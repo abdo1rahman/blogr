@@ -23,6 +23,7 @@ export default function Editor({ windowWidth }) {
               change the looks of a blog.
             </p>
           </div>
+
           <div>
             <h3>Robust content management</h3>
             <p>

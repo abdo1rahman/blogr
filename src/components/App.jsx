@@ -1,7 +1,10 @@
 import "./App.css";
+
 import Hero from "./Hero.jsx";
 import Editor from "./Editor.jsx";
 import NavLinks from "./NavLinks.jsx";
+import Infr from "./Infr.jsx";
+
 import { useState, useEffect } from "react";
 
 function App() {
@@ -12,6 +15,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 875) toggleNav(false);
     };
 
     // Listen for window resize
@@ -22,6 +26,19 @@ function App() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (navOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [navOpen]);
 
   return (
     <div className="app">
@@ -37,6 +54,7 @@ function App() {
         setWindowWidth={setWindowWidth}
       />
       <Editor windowWidth={windowWidth} />
+      <Infr />
     </div>
   );
 }
