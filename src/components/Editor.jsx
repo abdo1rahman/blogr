@@ -1,8 +1,16 @@
-export default function Editor() {
+export default function Editor({ windowWidth }) {
   return (
     <div className="editor">
       <h2>Designed for the future</h2>
       <div className="editor__details">
+        {windowWidth < 875 && (
+          <div className="mobile-visual">
+            <img
+              src="/images/illustration-editor-mobile.svg"
+              className="editor-visual-mb"
+            />
+          </div>
+        )}
         <div className="details__descreption">
           <div>
             <h3>Introducing an extensible editor</h3>
@@ -25,14 +33,16 @@ export default function Editor() {
             </p>
           </div>
         </div>
-        <div className="details__visual">
-          <img src="/images/editor-screen.svg" className="editor-screen" />
 
-          <img
-            src="/images/editor-circles.svg"
-            className="editor-circles self-orbit"
-          />
-        </div>
+        {windowWidth > 875 && (
+          <div className="details__visual">
+            <img src="/images/editor-screen.svg" className="editor-screen" />
+            <img
+              src="/images/editor-circles.svg"
+              className="editor-circles self-orbit"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

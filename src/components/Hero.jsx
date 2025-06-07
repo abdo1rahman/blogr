@@ -1,9 +1,21 @@
 import Navbar from "./Navbar.jsx";
 
-export default function Hero({ navOpen, toggleNav }) {
+export default function Hero({
+  navOpen,
+  toggleNav,
+  activeMenu,
+  setActiveMenu,
+  windowWidth,
+}) {
   return (
     <div className="hero">
-      <Navbar navOpen={navOpen} toggleNav={toggleNav} />
+      <Navbar
+        navOpen={navOpen}
+        toggleNav={toggleNav}
+        activeMenu={activeMenu}
+        setActiveMenu={setActiveMenu}
+        windowWidth={windowWidth}
+      />
       <div className="hero__title">
         <p className="hook">A modern publishing platform</p>
         <p className="subtitle">

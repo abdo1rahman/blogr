@@ -1,2 +1,3 @@
 1- The dropdown menus of the navbar are overlapping with the hero's title.
 2- If the navbar is open on mobile size and the window is expanded, the navbar stays open.
+3- Hamburger animation is still not applied

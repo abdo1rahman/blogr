@@ -1,11 +1,14 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 const threshold = 875;
 
-export default function Navbar({ navOpen, toggleNav }) {
-  const [activeMenu, setActiveMenu] = useState("");
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+export default function Navbar({
+  navOpen,
+  toggleNav,
+  activeMenu,
+  setActiveMenu,
+  windowWidth,
+}) {
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -16,20 +19,6 @@ export default function Navbar({ navOpen, toggleNav }) {
     };
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    // Listen for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   return (
