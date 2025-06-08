@@ -1,3 +1,4 @@
 1- The dropdown menus of the navbar are overlapping with the hero's title.
 2- Hamburger animation is still not applied
 3- If the navbar is open on mobile size, the body still scrols
+4- On extra-large window sizes the infr__details takes a left side instead of center

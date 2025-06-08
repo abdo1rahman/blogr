@@ -1,10 +1,9 @@
 export default function Infr() {
   return (
-    <div className="infr">
-      <img src="/images/bg-pattern-circles.svg" className="infr__bg" />
-
-      <img src="/images/illustration-phones.svg" className="phones" />
+    <div className="infr__wrapper">
       <div className="infr__items">
+        <img src="/images/illustration-phones.svg" className="phones" />
+
         <div className="items__details">
           <h3>State of the Art Infrastructure</h3>
           <p>
@@ -14,6 +13,10 @@ export default function Infr() {
             site competitive.
           </p>
         </div>
+      </div>
+
+      <div className="infr">
+        <img src="/images/bg-pattern-circles.svg" className="infr__bg" />
       </div>
     </div>
   );
