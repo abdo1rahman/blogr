@@ -54,7 +54,9 @@ function App() {
         setWindowWidth={setWindowWidth}
       />
       <Editor windowWidth={windowWidth} />
-      <Infr />
+      <div>
+        <Infr />
+      </div>
     </div>
   );
 }
