@@ -1,6 +1,6 @@
 export default function Infr() {
   return (
-    <div className="infr__wrapper">
+    <>
       <div className="infr__items">
         <img src="/images/illustration-phones.svg" className="phones" />
 
@@ -18,6 +18,6 @@ export default function Infr() {
       <div className="infr">
         <img src="/images/bg-pattern-circles.svg" className="infr__bg" />
       </div>
-    </div>
+    </>
   );
 }

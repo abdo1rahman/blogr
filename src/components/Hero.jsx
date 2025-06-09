@@ -26,8 +26,11 @@ export default function Hero({
           <button className="btn learn-more hero__btn">Learn More</button>
         </div>
       </div>
-
-      <img src="/images/bg-pattern-intro-desktop.svg" className="hero__bg" />
+      {windowWidth >= 875 ? (
+        <img src="/images/bg-pattern-intro-desktop.svg" className="hero__bg" />
+      ) : (
+        <img src="/images/bg-pattern-intro-mobile.svg" className="hero__bg" />
+      )}
     </div>
   );
 }

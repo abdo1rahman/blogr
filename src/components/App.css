@@ -221,13 +221,16 @@ nav {
   color: white;
 }
 
+/* *Editor */
+
 .editor {
-  margin: 6rem 6rem;
+  margin: 2rem 4rem;
 }
 
 .editor > h2 {
+  margin: 5rem 0;
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .editor__details {
@@ -252,7 +255,7 @@ nav {
 .editor-screen {
   position: absolute;
   top: -30rem;
-  right: -20rem;
+  right: -15rem;
   height: 50rem;
 }
 
@@ -375,19 +378,18 @@ nav {
 }
 
 .infr__wrapper {
-  position: relative;
-  bottom: 35rem;
-  /* !display: inline-flex; */
+  height: 50rem;
 }
 
 .infr {
-  height: 20rem;
+  height: 15rem;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(to left, var(--black), var(--deep-blue));
   position: relative;
+  bottom: 22rem;
   border-radius: 0 100px 0 100px;
   z-index: -2;
   color: white;
@@ -405,8 +407,8 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 8rem;
-  position: relative;
-  top: 30rem;
+  /* position: relative;
+  top: 30rem; */
   margin: 2rem 4rem;
   width: 90%;
   max-width: 100rem;
@@ -427,7 +429,7 @@ nav {
 
 .phones {
   overflow: visible;
-  height: 34rem;
+  height: 23rem;
   position: relative;
   top: 1rem;
 }
@@ -475,9 +477,15 @@ nav {
 }
 
 @media (max-width: 984px) {
+  .details__title {
+    font-size: 20px;
+  }
+  .details__descreption p {
+    font-size: 16px;
+  }
   .phones {
     height: 23rem;
-    top: 0;
+    top: 1rem;
   }
   .infr__items {
     top: 22rem;
@@ -497,6 +505,10 @@ nav {
 }
 
 @media (max-width: 875px) {
+  nav {
+    margin: 2rem 2rem 0 2rem;
+  }
+
   .nav-start {
     width: 100%;
     justify-content: space-between;
@@ -508,20 +520,24 @@ nav {
     font-size: 20px;
   }
 
+  .hero__bg {
+    height: 100rem;
+  }
+
   .hamburger {
-    position: sticky;
+    /* ?position: sticky; */
     height: 30px;
     width: auto;
     z-index: 2000;
   }
 
   .editor > h2 {
-    font-size: 55px;
+    font-size: 40px;
     margin-bottom: 0;
   }
 
   .editor__details {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -533,33 +549,127 @@ nav {
     width: 100%;
   }
 
-  .details__descreption {
-    text-align: center;
-  }
-
   .details__descreption h3 {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   .details__descreption p {
+    font-size: 16px;
+  }
+
+  .editor-screen,
+  .editor-circles {
+    height: 25rem;
+  }
+
+  .editor-screen {
+    top: -15rem;
+    right: -13rem;
+  }
+
+  .editor-circles {
+    top: -15rem;
+    right: -14rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .editor-screen,
+  .editor-circles {
+    height: 20rem;
+    right: -10rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .hero__bg {
+    height: 110rem;
+    transform: translate(-20%, -55%);
+  }
+}
+
+@media (max-width: 630px) {
+  .details__descreption {
+    width: 15rem;
+  }
+  .details__descreption h3 {
+    font-size: 16px;
+  }
+  .details__descreption p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 590px) {
+  .hero__bg {
+    height: 100rem;
+    transform: translate(-20%, -45%);
+  }
+
+  .hook {
     font-size: 30px;
   }
 
-  .editor-visual-mb {
-    height: 40rem;
+  .subtitle {
+    font-size: 18px;
   }
 
-  /* ?.editor-screen {
-    ?position: static;
-  ?}
-  ?.editor-circles {
-   ? position: relative;
-  ?} */
-
-  .infr__wrapper {
-    bottom: 25rem;
+  .infr {
+    bottom: 20rem;
   }
 
+  .infr__items h3 {
+    font-size: 30px;
+  }
+
+  .infr__items p {
+    font-size: 24px;
+  }
+
+  nav {
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  .hero__btn {
+    width: 10rem;
+    height: 3rem;
+    font-size: 16px;
+  }
+
+  .logo {
+    height: 2rem;
+    width: auto;
+  }
+
+  .hamburger {
+    height: 1.2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero__bg {
+    height: 90rem;
+    transform: translate(-20%, -45%);
+  }
+
+  .hook {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .hero__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    height: 2rem;
+    width: 8rem;
+  }
+}
+
+/* @media (max-width: ); */
+/* ////////// */
+/*
   .phones {
     height: 30rem;
     top: 5rem;
@@ -590,25 +700,4 @@ nav {
     bottom: 18rem;
     left: 4rem;
   }
-}
-
-@media (max-width: 590px) {
-  .hook {
-    font-size: 30px;
-  }
-  .subtitle {
-    font-size: 18px;
-  }
-
-  .infr {
-    bottom: 20rem;
-  }
-
-  .infr__items h3 {
-    font-size: 30px;
-  }
-
-  .infr__items p {
-    font-size: 24px;
-  }
-}
+*/
