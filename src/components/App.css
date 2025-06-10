@@ -9,6 +9,10 @@ hr {
   overflow: hidden;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -77,7 +81,7 @@ nav {
 .account {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin: 1rem;
 }
 
@@ -93,13 +97,13 @@ nav {
 
 .sm-signup {
   border: none;
-  background: linear-gradient(to right, var(--light-red), var(--red));
-  padding: 1rem;
+  background: linear-gradient(to right, var(--orange), var(--red));
+  padding: 0.5rem;
   font-size: 30px;
   font-family: "Overpass";
   font-weight: 600;
   border-radius: 999px;
-  width: 15rem;
+  width: 8rem;
   color: white;
 }
 
@@ -297,15 +301,13 @@ nav {
 
 .overlay {
   position: fixed;
-  top: 10rem;
+  top: 5rem;
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow-y: hidden;
-  overflow-x: hidden;
 }
 
 .mobile-nav {
@@ -320,8 +322,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 0 1rem 0 1rem;
-  padding: 2rem 0 2rem 0;
+  margin: 0;
+  padding: 0, 5rem 0 0.5rem 0;
   width: 90%;
   height: max(fit-content, 100vh);
   align-items: center;
@@ -329,6 +331,7 @@ nav {
   background-color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.438);
+  overflow-x: hidden;
 }
 
 .mobile__menu {
@@ -340,21 +343,19 @@ nav {
   color: var(--pitch-black);
   text-decoration: none;
   font-size: 34px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.mobile__item {
-  font-size: 32px;
-}
 .dropdown__menu {
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   background-color: rgba(168, 168, 168, 0.442);
   margin-left: 0;
-  width: max(20rem, 90%);
+  width: max(14rem);
   padding: 1rem;
   margin-bottom: 1rem;
   transform: translateX(-100px);
@@ -363,17 +364,24 @@ nav {
 
 .menu__item {
   color: var(--pitch-black);
-  font-size: 30px;
+  font-size: 16px;
+  font-weight: 600;
   margin: 1rem;
 }
 
 .drk-arw {
-  height: 15px;
+  height: 10px;
   margin-left: 0.5rem;
+}
+
+.flipped {
+  transform: rotate(180deg);
 }
 
 .fixed {
   position: fixed;
+  top: 3rem;
+  right: 4rem;
   z-index: 2000;
 }
 
@@ -407,8 +415,8 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 8rem;
-  /* position: relative;
-  top: 30rem; */
+  position: relative;
+  top: 30rem;
   margin: 2rem 4rem;
   width: 90%;
   max-width: 100rem;
@@ -531,13 +539,17 @@ nav {
     z-index: 2000;
   }
 
+  .mobile__item,
+  .menu-btn {
+    font-size: 18px;
+  }
+
   .editor > h2 {
     font-size: 40px;
     margin-bottom: 0;
   }
 
   .editor__details {
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -573,6 +585,19 @@ nav {
   }
 }
 
+@media (max-width: 780px) {
+  .phones {
+    height: 18rem;
+  }
+  .infr__items {
+    top: 1rem;
+  }
+  .infr {
+    bottom: 16rem;
+    height: 11rem;
+  }
+}
+
 @media (max-width: 730px) {
   .editor-screen,
   .editor-circles {
@@ -600,6 +625,14 @@ nav {
   }
 }
 @media (max-width: 590px) {
+  .hero {
+    height: 30rem;
+  }
+
+  .editor > h2 {
+    font-size: 22px;
+  }
+
   .hero__bg {
     height: 100rem;
     transform: translate(-20%, -45%);
@@ -613,8 +646,18 @@ nav {
     font-size: 18px;
   }
 
+  .editor__details {
+    flex-direction: column;
+  }
+
+  .editor-visual-mb {
+    /* width: max(60vw, 50rem); */
+    width: 20rem;
+    height: auto;
+  }
+
   .infr {
-    bottom: 20rem;
+    bottom: 30rem;
   }
 
   .infr__items h3 {
@@ -652,10 +695,12 @@ nav {
   }
 
   .hook {
-    font-size: 24px;
+    font-size: 20px;
+    text-align: center;
   }
   .subtitle {
-    font-size: 16px;
+    font-size: 14px;
+    text-align: center;
   }
   .hero__btn {
     display: flex;
@@ -666,38 +711,3 @@ nav {
     width: 8rem;
   }
 }
-
-/* @media (max-width: ); */
-/* ////////// */
-/*
-  .phones {
-    height: 30rem;
-    top: 5rem;
-  }
-
-  .infr {
-    height: 40rem;
-    bottom: 16rem;
-    border-radius: 0 200px 0 200px;
-  }
-
-  .infr__items {
-    flex-direction: column;
-    gap: 4rem;
-    text-align: center;
-    top: 20rem;
-    right: 2.2rem;
-  }
-
-  .infr__items h3 {
-    font-size: 40px;
-  }
-  .infr__items p {
-    font-size: 30px;
-  }
-  .infr__bg {
-    height: 45rem;
-    bottom: 18rem;
-    left: 4rem;
-  }
-*/

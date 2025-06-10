@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function NavLinks({ activeMenu, setActiveMenu }) {
+export default function NavMenu({ activeMenu, setActiveMenu }) {
   const dropdownRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -18,13 +18,14 @@ export default function NavLinks({ activeMenu, setActiveMenu }) {
         <a
           href="#"
           className="mobile__menu"
-          onClick={() =>
-            setActiveMenu(activeMenu === "product" ? "" : "product")
-          }
+          onClick={() => {
+            setActiveMenu(activeMenu === "product" ? "" : "product");
+            document.querySelector("#1").classList.toggle("flipped");
+          }}
         >
           <div>
             <span className="mobile__item">Product</span>
-            <img src="/images/icon-arrow-dark.svg" className="drk-arw" />
+            <img src="/images/icon-arrow-dark.svg" id="1" className="drk-arw" />
           </div>
         </a>
         {activeMenu === "product" && (
@@ -44,13 +45,14 @@ export default function NavLinks({ activeMenu, setActiveMenu }) {
         <a
           href="#"
           className="mobile__menu"
-          onClick={() =>
-            setActiveMenu(activeMenu === "company" ? "" : "company")
-          }
+          onClick={() => {
+            setActiveMenu(activeMenu === "company" ? "" : "company");
+            document.querySelector("#2").classList.toggle("flipped");
+          }}
         >
           <div>
             <span className="mobile__item">Company</span>
-            <img src="/images/icon-arrow-dark.svg" className="drk-arw" />
+            <img src="/images/icon-arrow-dark.svg" id="2" className="drk-arw" />
           </div>
         </a>
         {activeMenu === "company" && (
@@ -69,13 +71,14 @@ export default function NavLinks({ activeMenu, setActiveMenu }) {
         <a
           href="#"
           className="mobile__menu"
-          onClick={() =>
-            setActiveMenu(activeMenu === "connect" ? "" : "connect")
-          }
+          onClick={() => {
+            setActiveMenu(activeMenu === "connect" ? "" : "connect");
+            document.querySelector("#3").classList.toggle("flipped");
+          }}
         >
           <div>
             <span className="mobile__item">Connect</span>
-            <img src="/images/icon-arrow-dark.svg" className="drk-arw" />
+            <img src="/images/icon-arrow-dark.svg" id="3" className="drk-arw" />
           </div>
         </a>
         {activeMenu === "connect" && (
@@ -91,8 +94,8 @@ export default function NavLinks({ activeMenu, setActiveMenu }) {
         )}
         <hr />
         <div className="account">
-          <button className="sm-login">Login</button>
-          <button className="sm-signup">Sign Up</button>
+          <button className="sm-login menu-btn">Login</button>
+          <button className="sm-signup menu-btn">Sign Up</button>
         </div>
       </div>
     </div>

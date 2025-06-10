@@ -3,7 +3,7 @@ export default function Editor({ windowWidth }) {
     <div className="editor">
       <h2 className="editor__title">Designed for the future</h2>
       <div className="editor__details">
-        {windowWidth < 590 && (
+        {windowWidth <= 590 && (
           <div className="mobile-visual">
             <img
               src="/images/illustration-editor-mobile.svg"

@@ -2,7 +2,7 @@ import "./App.css";
 
 import Hero from "./Hero.jsx";
 import Editor from "./Editor.jsx";
-import NavLinks from "./NavLinks.jsx";
+import NavMenu from "./NavMenu.jsx";
 import Infr from "./Infr.jsx";
 
 import { useState, useEffect } from "react";
@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="app">
       {navOpen && (
-        <NavLinks activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
+        <NavMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
       )}
       <Hero
         navOpen={navOpen}

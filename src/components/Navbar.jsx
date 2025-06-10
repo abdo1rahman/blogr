@@ -128,7 +128,7 @@ export default function Navbar({
                   ? "/images/icon-close.svg"
                   : "/images/icon-hamburger.svg"
               }
-              className={navOpen ? "hamburger fixed" : "hamburger"}
+              className="hamburger"
             />
           </div>
         )}
