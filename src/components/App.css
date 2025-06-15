@@ -441,6 +441,28 @@ nav {
   top: 1rem;
 }
 
+.features {
+  display: flex;
+  gap: 2rem;
+}
+
+.laptop,
+.features-circles {
+  height: 35rem;
+}
+
+.features-circles {
+  position: absolute;
+  left: -2rem;
+  transform: translateY(-80rem);
+  z-index: -1;
+}
+
+.laptop {
+  position: relative;
+  right: 6rem;
+}
+
 @media (max-width: 1250px) {
   .editor-screen {
     height: 37.5rem;

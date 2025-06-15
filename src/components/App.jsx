@@ -4,6 +4,7 @@ import Hero from "./Hero.jsx";
 import Editor from "./Editor.jsx";
 import NavMenu from "./NavMenu.jsx";
 import Infr from "./Infr.jsx";
+import Features from "./Features.jsx";
 
 import { useState, useEffect } from "react";
 
@@ -56,6 +57,9 @@ function App() {
       <Editor windowWidth={windowWidth} />
 
       <Infr />
+      <div className="rest-of-page">
+        <Features />
+      </div>
     </div>
   );
 }
