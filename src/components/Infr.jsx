@@ -18,6 +18,7 @@ export default function Infr() {
       <div className="infr">
         <img src="/images/bg-pattern-circles.svg" className="infr__bg" />
       </div>
+      <div className="rest-of-the-page"></div>
     </>
   );
 }
