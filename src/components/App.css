@@ -294,7 +294,8 @@ nav {
   font-size: 24px;
 }
 
-.details__descreption p {
+.details__descreption p,
+.features__descreption p {
   color: var(--gray);
   font-size: 20px;
 }
@@ -443,7 +444,6 @@ nav {
 
 .features {
   display: flex;
-  gap: 2rem;
 }
 
 .laptop,
@@ -454,13 +454,34 @@ nav {
 .features-circles {
   position: absolute;
   left: -2rem;
-  transform: translateY(-80rem);
   z-index: -1;
 }
 
 .laptop {
   position: relative;
   right: 6rem;
+}
+
+.features__descreption {
+  padding: 0 4rem 0 0;
+  margin: 2rem 0 0 0;
+}
+
+.rest-of-page {
+  position: relative;
+  bottom: 12rem;
+}
+
+footer {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  background-color: var(--pitch-black);
+  border-radius: 0 100px 0 0;
+  color: white;
+  padding: 4rem;
+  position: relative;
+  top: 5rem;
 }
 
 @media (max-width: 1250px) {
@@ -509,7 +530,8 @@ nav {
   .details__title {
     font-size: 20px;
   }
-  .details__descreption p {
+  .details__descreption p,
+  .features__descreption p {
     font-size: 16px;
   }
   .phones {
@@ -581,11 +603,13 @@ nav {
     width: 100%;
   }
 
-  .details__descreption h3 {
+  .details__descreption h3,
+  .features__descreption h3 {
     font-size: 20px;
   }
 
-  .details__descreption p {
+  .details__descreption p,
+  .features__descreption p {
     font-size: 16px;
   }
 
@@ -602,6 +626,11 @@ nav {
   .editor-circles {
     top: -15rem;
     right: -14rem;
+  }
+
+  .laptop,
+  .features-circles {
+    height: 20rem;
   }
 }
 
@@ -641,6 +670,9 @@ nav {
   .items__details p {
     font-size: 12px;
   }
+  .rest-of-page {
+    bottom: 5rem;
+  }
 }
 
 @media (max-width: 690px) {
@@ -648,16 +680,38 @@ nav {
     height: 110rem;
     transform: translate(-20%, -55%);
   }
+  .laptop {
+    position: static;
+  }
+  .features-circles {
+    left: max(25%, 6rem);
+    /* left: 6rem; */
+    top: -2rem;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features__descreption {
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+  }
+  .rest-of-page {
+    top: 1rem;
+  }
 }
 
 @media (max-width: 630px) {
   .details__descreption {
     width: 15rem;
   }
-  .details__descreption h3 {
+  .details__descreption h3,
+  .features__descreption h3 {
     font-size: 16px;
   }
-  .details__descreption p {
+  .details__descreption p,
+  .features__descreption p {
     font-size: 12px;
   }
 }
@@ -739,6 +793,9 @@ nav {
   .hamburger {
     height: 1.2rem;
   }
+  .rest-of-page {
+    top: 0;
+  }
 }
 
 @media (max-width: 502px) {
@@ -768,5 +825,13 @@ nav {
     font-size: 12px;
     height: 2rem;
     width: 8rem;
+  }
+  .laptop,
+  .features-circles {
+    height: 16rem;
+  }
+  .features-circles {
+    bottom: 22rem;
+    left: 2rem;
   }
 }

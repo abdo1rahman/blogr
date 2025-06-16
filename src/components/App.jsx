@@ -5,6 +5,7 @@ import Editor from "./Editor.jsx";
 import NavMenu from "./NavMenu.jsx";
 import Infr from "./Infr.jsx";
 import Features from "./Features.jsx";
+import Footer from "./Footer.jsx";
 
 import { useState, useEffect } from "react";
 
@@ -59,6 +60,7 @@ function App() {
       <Infr />
       <div className="rest-of-page">
         <Features />
+        <Footer />
       </div>
     </div>
   );

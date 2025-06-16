@@ -17,4 +17,9 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-family: "Overpass";
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
 }
