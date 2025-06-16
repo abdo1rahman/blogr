@@ -485,6 +485,15 @@ footer {
   height: 20rem;
 }
 
+.element {
+  color: rgb(195, 195, 195);
+  cursor: pointer;
+}
+
+.element:hover {
+  color: white;
+}
+
 @media (max-width: 1250px) {
   .editor-screen {
     height: 37.5rem;
@@ -632,6 +641,18 @@ footer {
   .laptop,
   .features-circles {
     height: 20rem;
+  }
+
+  .infr {
+    bottom: 16rem;
+  }
+
+  .infr__items {
+    top: 6rem;
+  }
+
+  footer {
+    padding: 2rem 0;
   }
 }
 
@@ -796,6 +817,14 @@ footer {
   }
   .rest-of-page {
     top: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    overflow: scroll;
+    margin-bottom: 2rem;
   }
 }
 
