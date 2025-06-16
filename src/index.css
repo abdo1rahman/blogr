@@ -16,7 +16,7 @@ html,
 body {
   overflow-x: hidden;
   margin: 0;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   scrollbar-width: none; /* Firefox */
 }
 

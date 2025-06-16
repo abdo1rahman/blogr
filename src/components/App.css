@@ -9,10 +9,6 @@ hr {
   overflow: hidden;
 }
 
-.no-scroll {
-  overflow-y: hidden;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -22,8 +18,12 @@ nav {
   height: 60px;
   margin: 4rem 4rem 0 4rem;
   color: white;
-  position: relative;
-  z-index: 10;
+  position: sticky; /*? this is not working*/
+  z-index: 2000;
+}
+
+.hook {
+  z-index: 1;
 }
 
 .nav-start,
@@ -35,7 +35,7 @@ nav {
 
 .links {
   gap: 1.5rem;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
 }
 
@@ -60,7 +60,7 @@ nav {
 .signup {
   border-radius: 999px;
   border: none;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
   padding: 0.6rem 1.5rem;
   color: var(--red);
@@ -74,7 +74,7 @@ nav {
   background-color: transparent;
   color: white;
   cursor: pointer;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
 }
 
@@ -90,7 +90,7 @@ nav {
   background-color: transparent;
   color: var(--pitch-black);
   cursor: pointer;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
   font-size: 30px;
 }
@@ -100,7 +100,7 @@ nav {
   background: linear-gradient(to right, var(--orange), var(--red));
   padding: 0.5rem;
   font-size: 30px;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
   font-weight: 600;
   border-radius: 999px;
   width: 8rem;
@@ -199,7 +199,7 @@ nav {
   font-weight: 600;
   padding: 0.6rem 1.5rem;
   cursor: pointer;
-  font-family: "Overpass";
+  font-family: "Overpass", sans-serif;
 }
 
 .learn-more {
@@ -485,6 +485,10 @@ footer {
   height: 20rem;
 }
 
+.list-title {
+  font-size: 18px;
+}
+
 .element {
   color: rgb(195, 195, 195);
   cursor: pointer;
@@ -653,6 +657,7 @@ footer {
 
   footer {
     padding: 2rem 0;
+    text-align: center;
   }
 }
 
