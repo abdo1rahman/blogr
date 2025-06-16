@@ -60,8 +60,8 @@ function App() {
       <Infr />
       <div className="rest-of-page">
         <Features />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
