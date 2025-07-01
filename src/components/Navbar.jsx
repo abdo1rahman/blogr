@@ -130,6 +130,11 @@ export default function Navbar({
               }
               className="hamburger"
             />
+            <div id="hamburger" class="hamburger">
+              <span class="line top"></span>
+              <span class="line middle"></span>
+              <span class="line bottom"></span>
+            </div>
           </div>
         )}
       </div>
